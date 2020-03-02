@@ -1,0 +1,140 @@
+﻿body {
+    background-color:#e8e8e8;
+}
+
+#menu ul{
+    list-style:none;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+
+}
+#menu ul li{
+    background-color:black;
+    color:white;
+    border:solid 1px #e8e8e8;
+    text-align:center;
+    width:120px;
+    line-height:35px;
+    height:35px;
+    float:left;
+    padding-left:0px;
+    position:relative;
+
+}
+#menu ul li:hover{
+    background-color:grey;
+}
+#menu ul li a{
+
+    color:white;
+    text-align:center;
+    display:block;
+    text-decoration:none;
+
+}
+#menu ul li a:hover{
+    color:darkgray;
+}
+
+#secmeyok
+{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
+}
+
+#button 
+{
+    background-color:black;
+    color:white;
+    border:solid 1px #e8e8e8;
+    text-align:center;
+    width:120px;
+    line-height:35px;
+    height:35px;
+    float:left;
+    padding-left:0px;
+    position:relative;
+}
+
+#gizli
+{
+    display:none;
+   
+
+}
+
+.dinamikbutton
+{
+
+
+}
+
+.dinamiktablo
+{
+}
+#dinamictablo td /*<- DINAMIK TABLO TDLERI BURDAN DA TASARLANABILIR */
+{
+
+}
+
+#dinamictablo tr /*<- TRLER BURDAN TASARLANABILIR*/
+{
+
+}
+
+#dinamiktablo td
+{
+}
+
+/* BURDAN SONRASI ASP NESNELERI  */
+
+
+
+.myaspbutton
+{
+  margin-left:10px;
+}
+
+.addbutton
+{
+
+}
+
+.textbox
+{
+
+}
+
+.label
+{
+
+}
+.ayrikcheckbox
+{
+    margin-left:10px;
+}
+
+
+.checkbox
+{
+
+}
+
+
+/* BURAYA KADAR */
+.msgdiv
+{
+
+}
+.hatadiv
+{
+
+}

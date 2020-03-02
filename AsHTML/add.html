@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)/add.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+</title>
+
+    <style type="text/css">
+        .holder {
+            height: auto;
+            margin-top: 70px;
+            margin-left:60px;
+
+        }
+   
+        .auto-style1 {
+            width: 100%;
+        }
+   
+        .auto-style2 {
+            margin-bottom: 0;
+        }
+        .auto-style3 {
+            height: 22px;
+        }
+
+        .auto-style4 {
+            height: 28px;
+        }
+  
+
+        .auto-style5 {
+            height: 21px;
+        }
+  
+        .ayrik
+        {
+            margin-left:10px;
+        }
+
+    </style>
+    <link href="./add_files/Genel.css" rel="stylesheet"></head>
+<body onload="temizle(); hatadiv_gizle();">
+   
+
+    <script>
+        // simple toggling
+        function gizlegoster(_elem)
+        {
+            var cbSifre = document.getElementById("cbPass");
+            var sifrealani = _elem;
+            var cbprivate = document.getElementById("cbPrivate");
+            if (cbSifre.checked == true)
+            {
+
+                cbprivate.checked  = true;
+                cbprivate.disabled = true; // DONT TRY TO ENABLE THIS THROUGH JS DEBUGGER THEN ADDING URL TO THE SERVER,I  STILL CHECK IT FROM CODEBEHIND
+                sifrealani.style.display = ""; 
+
+            }
+            else
+            {
+              
+                if (cbprivate.disabled)
+                {
+                    cbprivate.disabled = false;
+                    cbprivate.checked = false;
+                }
+                sifrealani.style.display = "none";
+
+
+            }
+
+
+           return 0;
+        }
+
+        function temizle()
+        {
+            var pass = document.getElementById("cbPass");
+            var cprivate = document.getElementById("cbPrivate");
+            var fixurl = document.getElementById("cbFixUrl");
+            pass.checked = false;
+            cprivate.checked = false;
+            fixurl.checked = true;
+                    return 0;
+        }
+
+        function $(x)
+        {
+            return document.getElementById(x);
+        }
+
+
+        function hatadiv_gizle_vekil()
+        {
+
+            hatadiv.innerText = "";
+
+        }
+        // post_back sonrasi silmek için.
+        function hatadiv_gizle()
+        {
+          
+           myVar = setTimeout(hatadiv_gizle_vekil, 5000);
+
+        }
+
+    </script>
+
+    <form method="post" action="/add.html" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="6roCKGD69niFlgG+Ck16GOUWRCfrpjtkAF1oq/IKtaAQZGNcKNNJLMEGqzUv0CN43cYx9ItNd/wZyovVHdsXd2STiB/ut9O252X7q3l4SSOXo3SkI5POeoptwfDg12G5fEWP0ZY2niQqKBMc7iSY04sHLnQwZU9u+fcOdiEikMSO4kjetzbzFNzSypWu9CUW">
+</div>
+
+
+
+     <div id="menu">
+     <ul>
+         <li><a href="Default.html">Main Page</a></li>
+         <li><a href="search.html">Search</a></li>
+         <li><a href="add.html">Add</a></li>
+         <li><a href="topcontent.html">Top Content</a></li>
+     </ul>
+    </div>
+        &nbsp;&nbsp;
+        <div id="tableholder" class="holder">
+           <table class="auto-style1">
+               <tbody><tr>
+                   <td class="auto-style3">
+
+        <span id="Label2" class="label">Title:</span>
+                    </td>
+                   <td class="auto-style3">
+        <input name="txtTitle" type="text" id="txtTitle" class="textbox" style="width:566px;">
+                    </td>
+                   <td class="auto-style3"></td>
+               </tr>
+               <tr>
+                   <td class="auto-style4">
+                    <span id="Label1" class="label">Link:</span>
+
+                   </td>
+                   <td class="auto-style4">
+                    <input name="txtUrl" type="text" id="txtUrl" class="textbox" style="width:569px;">
+                    <input type="submit" name="Button1" value="Shorten" onclick="myVar = setTimeout(hatadiv_gizle_vekil,5000); return 0;" id="Button1" class="myaspbutton">
+                   </td>
+                   <td class="auto-style4"></td>
+               </tr>
+               <tr>
+                   <td></td>
+                   <td>
+              
+                    <span class="checkbox"><input id="cbFixUrl" type="checkbox" name="cbFixUrl" checked="checked"><label for="cbFixUrl">Fix Url</label></span>
+                   
+                       <span class="ayrikcheckbox"><input id="cbPrivate" type="checkbox" name="cbPrivate"><label for="cbPrivate">Private</label></span>
+                   
+                       <span class="checkbox"><input id="cbPass" type="checkbox" name="cbPass" onclick="gizlegoster(passField);"><label for="cbPass">Password</label></span>
+                   
+                    </td>
+                   <td></td>
+               </tr>
+               <tr>
+                   <td class="auto-style5">
+                       </td>
+                   <td class="auto-style5">
+                      
+                        <div id="passField" style="display:none">
+                      
+                      <span id="lblPass">Password:</span>
+                                  &nbsp;
+                       <input name="txtPass" type="text" id="txtPass">
+                  
+                                 </div>
+                   
+     
+                   </td>
+                   <td class="auto-style5"></td>
+               </tr>
+
+ <tr>
+                   <td></td>
+                   <td>
+                        <div id="msgdiv" class="msgdiv"></div>
+                       <div id="hatadiv" class="hatadiv" style="color:red;"></div>
+                   </td>
+                   <td></td>
+ </tr>
+
+
+           </tbody></table>
+             </div>
+
+    
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="68D1C166">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ZB2lagn1H9AnDc4lV7JoUnGIjlpXMq7wCV3iwpALZ+hK1jfontS4PRlrUHUJMAxgP+57rUkQTN+gT8vR2/Tg4AAUCGt/gVbrN5iQ/rpkQP/IP7Xu7Cw3H9xRBKx4ae/ShYPwkzJ/bRhb46esJpfPFByQPlpVSgx2ndI/iE+KN0YYl36mv1CTEausajie/Us6Xqbew+R0crsBScv//FyKx4JMP4gVFNYwZ6EbKv+ioqpD8uguk0anBHiIjzOjCsa+">
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Chrome","requestId":"437f706a9baf4070a68bd0d89cde6912"}
+</script>
+<script type="text/javascript" src="./add_files/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+
+
+</body></html>
